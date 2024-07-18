@@ -1,0 +1,24 @@
+<!-- 18) Create a variable basePrice and assign it the value 100. 
+Declare another variable discount and assign it the string "10%". 
+Convert the discount to a number and calculate the discounted price. Print the final price. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let basePrice="100";
+        let discount="10%";
+
+        let discountPercentage = parseInt(discount) / 100;
+        let finalPrice = basePrice - (basePrice * discountPercentage);
+
+        console.log(finalPrice); 
+
+    </script>
+</body>
+</html>

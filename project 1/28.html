@@ -1,0 +1,62 @@
+<!-- 28) Employee Salary Calculator
+
+Create a program to calculate the annual salary of an employee.
+
+- Declare variables to store the following information:
+
+    Basic Salary (Number)
+    House Rent Allowance (HRA) (Number)
+    Other Allowances (Number)
+
+- Write a function to calculate the total monthly salary and then the annual salary.
+- Initialize these variables with sample data.
+- Display the results using console.log() and innerHTML. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Employee Salary Calculator</h1>
+  <input id="basicSalary" type="number" value="50000">
+  <input id="hra" type="number" value="10000">
+  <input id="otherAllowances" type="number" value="5000">
+  <button onclick="calculateSalary()">Calculate Salary</button>
+  <div id="result"></div>
+
+  <script>
+    let basicSalary = 0;
+    let hra = 0;
+    let otherAllowances = 0;
+    let totalMonthlySalary = 0;
+    let annualSalary = 0;
+
+    function calculateSalary() {
+      basicSalary = parseFloat(document.getElementById("basicSalary").value);
+      hra = parseFloat(document.getElementById("hra").value);
+      otherAllowances = parseFloat(document.getElementById("otherAllowances").value);
+
+      totalMonthlySalary = basicSalary + hra + otherAllowances;
+      annualSalary = totalMonthlySalary * 12;
+
+      console.log(`Basic Salary: ${basicSalary}`);
+      console.log(`HRA: ${hra}`);
+      console.log(`Other Allowances: ${otherAllowances}`);
+      console.log(`Total Monthly Salary: ${totalMonthlySalary}`);
+      console.log(`Annual Salary: ${annualSalary}`);
+
+      document.getElementById("result").innerHTML = `
+        <p>Basic Salary: ${basicSalary}</p>
+        <p>HRA: ${hra}</p>
+        <p>Other Allowances: ${otherAllowances}</p>
+        <p>Total Monthly Salary: ${totalMonthlySalary}</p>
+        <p>Annual Salary: ${annualSalary}</p>
+      `;
+    }
+  </script>
+
+</body>
+</html>
